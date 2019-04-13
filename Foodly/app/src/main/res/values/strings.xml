@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Foodly</string>
+    <string name="home">الرئيسية</string>
+    <string name="meal">الوجبات</string>
+    <string name="mealsuggest">اقتراح وجبة</string>
+    <string name="order">الطلبات</string>
+    <string name="account">الحساب</string>
 </resources>

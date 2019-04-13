@@ -6,7 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/colorPrimary">
+    android:layoutDirection="rtl"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@color/white">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,7 +26,10 @@
         android:background="#ffffff"
         app:tabIndicatorHeight="0dp"
         android:layout_alignParentBottom="true"
+        android:layoutDirection="rtl"
+        app:tabTextAppearance="@style/MyCustomTabText"
         app:tabMode="fixed"
+        app:tabTextColor="@color/grey"
         android:theme="@style/ThemeOverlay.MaterialComponents.Light">
 
     </com.google.android.material.tabs.TabLayout>
