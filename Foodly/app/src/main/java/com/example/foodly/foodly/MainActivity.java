@@ -1,11 +1,11 @@
 package com.example.foodly.foodly;
 
 
-import androidx.appcompat.app.ActionBar;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.widget.NestedScrollView;
+
 import androidx.fragment.app.Fragment;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -26,11 +26,10 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tab_layout;
-    private ActionBar actionBar;
-    private NestedScrollView nested_scroll_view;
+
     Home home= new Home();
     Meal meal=new Meal();
-    Account acount=new Account();
+    Account account=new Account();
     Order order=new Order();
     MealSuggest mealSuggest=new MealSuggest();
     Fragment fragment = home;
@@ -43,14 +42,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initComponent();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame1,fragment).commit();
 //         getActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
         centerTitle();
     }
 
     private void initComponent() {
 
-        tab_layout = findViewById(R.id.tab_layout);
+        tab_layout = findViewById(R.id.tab_layout1);
         tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_home).setText(R.string.home), 0);
         tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_search).setText(R.string.meal), 1);
         tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_add_box).setText(R.string.mealsuggest), 2);
@@ -85,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
                         fragment= order;
                         break;
                     case 4:
-                        fragment=acount;
+                        fragment=account;
                         break;
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame,fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame1,fragment).commit();
             }
 
 

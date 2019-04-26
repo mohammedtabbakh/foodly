@@ -2,7 +2,15 @@
     <string name="app_name">Foodly</string>
     <string name="home">الرئيسية</string>
     <string name="meal">الوجبات</string>
+    <string name="mealDetail">المكونات</string>
+    <string name="mealDesc">تفاصيل الوجبة</string>
     <string name="mealsuggest">اقتراح وجبة</string>
     <string name="order">الطلبات</string>
     <string name="account">الحساب</string>
+    <string name="title_activity_meal_detail">MealDetail</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
