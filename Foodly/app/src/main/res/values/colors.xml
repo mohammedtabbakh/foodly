@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#4E814E</color>
     <color name="colorAccent">#4E814E</color>
     <color name="grey">#5F5C5C</color>
+    <color name="grey_less">#ACACAC</color>
     <color name="deep_orange_500">#FF5722</color>
     <color name="white">#FFFFFF</color>
     <color name="green">#335233</color>

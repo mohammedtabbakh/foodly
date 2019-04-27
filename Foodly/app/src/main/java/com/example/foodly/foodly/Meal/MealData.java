@@ -1,6 +1,6 @@
 package com.example.foodly.foodly.Meal;
 
-public class MealData {
+  public class MealData {
     private String MealName;
     private int MealImage;
 

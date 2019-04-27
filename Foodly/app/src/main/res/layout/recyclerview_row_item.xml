@@ -7,45 +7,48 @@
     <!--android:layout_height="wrap_content"-->
     <!--android:orientation="vertical">-->
 
-<com.google.android.material.card.MaterialCardView
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_margin="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp"
+    >
 
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
 
-        <!--<FrameLayout-->
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical">-->
-
-            <ImageButton
-                android:id="@+id/meal_image"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-
-                android:scaleType="center"
-                android:src="@drawable/keba" />
-
-            <TextView
-                android:id="@+id/meal_title"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-
-                android:layout_gravity="center|bottom"
-                android:background="@drawable/shadow"
-
-                android:text="كبة"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-
-                android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/meal_image"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
 
 
-        <!--</FrameLayout>-->
-    </com.google.android.material.card.MaterialCardView>
+        android:src="@drawable/rose" />
+
+
+    <TextView
+        android:id="@+id/meal_title"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/shadow"
+
+        android:text="كبة"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+
+        android:textStyle="bold" />
+
+
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>
 
 <!--</LinearLayout>-->

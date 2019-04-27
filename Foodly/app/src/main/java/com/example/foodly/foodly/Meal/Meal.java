@@ -26,7 +26,7 @@ public class Meal extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent= new Intent(getContext(),MealName.class);
+                Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
                 startActivity(intent);
             }
         });

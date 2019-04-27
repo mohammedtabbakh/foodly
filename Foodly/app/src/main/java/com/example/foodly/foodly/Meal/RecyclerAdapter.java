@@ -2,10 +2,12 @@ package com.example.foodly.foodly.Meal;
 
 import android.content.Context;
 import android.content.Intent;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,7 +21,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
 
     private Context mContext;
     private List<MealData> mMealList;
-    LinearLayout linearLayout;
+
 
 
     public RecyclerAdapter(Context mContext, List<MealData> mMealList) {
@@ -42,9 +44,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
        holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(mContext, MealDetail.class);
+                Intent mIntent = new Intent(mContext,MealDetail.class);
                 mIntent.putExtra("Title", mMealList.get(holder.getAdapterPosition()).getMealName());
-
                 mIntent.putExtra("Image", mMealList.get(holder.getAdapterPosition()).getMealImage());
                 mContext.startActivity(mIntent);
             }
@@ -62,11 +63,13 @@ class MealViewHolder extends RecyclerView.ViewHolder {
     TextView mTitle;
     CardView mCardView;
 
+
     MealViewHolder(View itemView) {
         super(itemView);
         mImage = itemView.findViewById(R.id.meal_image);
         mTitle = itemView.findViewById(R.id.meal_title);
         mCardView = itemView.findViewById(R.id.cardview);
+
 
     }
 }

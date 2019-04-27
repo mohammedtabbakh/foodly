@@ -19,11 +19,11 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/mealImage"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
 
@@ -45,14 +45,12 @@
                 android:textStyle="bold" />
         </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/frame2"
 
 
 
-            />
+
+
+
 
 
         <com.google.android.material.tabs.TabLayout
@@ -61,22 +59,24 @@
             android:layout_height="wrap_content"
             app:tabMode="fixed"
             app:tabTextColor="@color/green"
-            android:background="@color/grey"
+            android:background="@color/grey_less"
             android:layoutDirection="rtl"
+
+
             android:theme="@style/ThemeOverlay.MaterialComponents.Light">
 
-
-
-
-
         </com.google.android.material.tabs.TabLayout>
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame2"
+
+    />
+
+
 
 
 

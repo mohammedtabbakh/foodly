@@ -5,7 +5,6 @@ package com.example.foodly.foodly;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-
 import androidx.fragment.app.Fragment;
 import android.graphics.PorterDuff;
 import android.os.Bundle;

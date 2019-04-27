@@ -33,29 +33,34 @@ public class MealName extends AppCompatActivity {
 
         mMealList = new ArrayList<>();
         mMealData = new MealData("كبة",
-                R.drawable.keba);
+                R.drawable.rose);
         mMealList.add(mMealData);
+
         mMealData = new MealData("شكليطة",
                 R.drawable.keba);
         mMealList.add(mMealData);
+
         mMealData = new MealData("نزار",
-                R.drawable.keba);
+                R.drawable.rose);
         mMealList.add(mMealData);
+
         mMealData = new MealData("مهند",
                 R.drawable.keba);
         mMealList.add(mMealData);
+
         mMealData = new MealData("يامن",
-                R.drawable.keba);
+                R.drawable.rose);
         mMealList.add(mMealData);
+
         mMealData = new MealData("ريم",
                 R.drawable.keba);
         mMealList.add(mMealData);
+
         mMealData = new MealData("محمد",
                 R.drawable.keba);
         mMealList.add(mMealData);
-        mMealData = new MealData("رغد",
-                R.drawable.logo);
-        mMealList.add(mMealData);
+
+
 
 
 
