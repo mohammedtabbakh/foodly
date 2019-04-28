@@ -12,21 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a42d9cea-facd-413a-af07-282e1d06fd01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/FragmentMealDesc.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/FragmentMealDesc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/FragmentMealDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/FragmentMealDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealName.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/RecyclerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/RecyclerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meal_desc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meal_desc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meal_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meal_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/meal_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/meal_detail.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recyclerview_row_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recyclerview_row_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +43,7 @@
           <entry key="Translations Editor" value="1" />
           <entry key="class" value="1" />
           <entry key="gradle" value="2" />
-          <entry key="java" value="51" />
+          <entry key="java" value="52" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="1" />
           <entry key="properties" value="1" />
@@ -70,7 +56,7 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="51" />
+          <entry key="JAVA" value="52" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="64" />
         </counts>
@@ -79,20 +65,32 @@
         <counts>
           <entry key="java" value="1392" />
           <entry key="txt" value="3" />
-          <entry key="xml" value="2343" />
+          <entry key="xml" value="2390" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1392" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="2343" />
+          <entry key="XML" value="2390" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/MealDetail.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,11 +126,11 @@
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recyclerview_row_item.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+            <state relative-caret-position="136">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
@@ -198,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="78" />
     <option name="y" value="-6" />
     <option name="width" value="1346" />
@@ -459,7 +457,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" sideWeight="0.5011655" side_tool="true" weight="0.19667171" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988345" visible="true" weight="0.19667171" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4988345" visible="true" weight="0.19667171" />
       <window_info id="Structure" order="2" sideWeight="0.5011655" side_tool="true" weight="0.19667171" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -470,19 +468,19 @@
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Build" order="4" weight="0.22786885" />
       <window_info anchor="bottom" id="Android Profiler" order="5" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.28196722" />
-      <window_info anchor="bottom" id="Logcat" order="8" weight="0.2967213" />
+      <window_info anchor="bottom" id="Logcat" order="8" visible="true" weight="0.3147541" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="StringPreview" order="5" />
-      <window_info active="true" anchor="right" id="Preview" order="6" visible="true" weight="0.3207262" />
+      <window_info anchor="right" id="Preview" order="6" weight="0.3207262" />
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" sideWeight="0.5011655" side_tool="true" weight="0.19667171" />
@@ -710,16 +708,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="43" column="80" selection-start-line="43" selection-start-column="80" selection-end-line="43" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/Meal/FragmentMealDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -827,11 +815,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recyclerview_row_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        <state relative-caret-position="136">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/foodly/foodly/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
