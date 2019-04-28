@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -22,7 +21,7 @@
     <EditText
         android:id="@+id/etName"
         android:layout_width="250dp"
-        android:layout_height="45dp"
+        android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="236dp"
         android:layout_marginEnd="8dp"
@@ -46,9 +45,9 @@
         android:layout_marginTop="332dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="كلمــة المرور"
-        android:drawableRight="@drawable/ic_lock_outline_black_24dp"
         android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_lock_black_24dp"
+        android:hint="كلمــة المرور"
         android:inputType="textPassword"
         android:paddingLeft="140dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +97,7 @@
     <View
         android:id="@+id/divider"
         android:layout_width="300dp"
-        android:layout_height="2dp"
+        android:layout_height="0.5dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="228dp"
