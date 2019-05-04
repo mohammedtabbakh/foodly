@@ -30,8 +30,8 @@ public class MealName extends AppCompatActivity {
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(MealName.this, 3);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
 
-
         mMealList = new ArrayList<>();
+
         mMealData = new MealData("كبة",
                 R.drawable.rose);
         mMealList.add(mMealData);
@@ -39,6 +39,10 @@ public class MealName extends AppCompatActivity {
         mMealData = new MealData("شكليطة",
                 R.drawable.keba);
         mMealList.add(mMealData);
+
+
+
+
 
         mMealData = new MealData("نزار",
                 R.drawable.rose);
