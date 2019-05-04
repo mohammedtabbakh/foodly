@@ -34,6 +34,9 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
 
 </RelativeLayout>
