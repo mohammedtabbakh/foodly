@@ -52,7 +52,7 @@ public class MealName extends AppCompatActivity {
                 R.drawable.keba);
         mMealList.add(mMealData);
 
-        mMealData = new MealData("يامن",
+        mMealData = new MealData("رغد",
                 R.drawable.rose);
         mMealList.add(mMealData);
 

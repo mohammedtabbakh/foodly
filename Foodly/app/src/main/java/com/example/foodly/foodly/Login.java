@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
+import com.example.foodly.foodly.Meal.Meal;
+import com.example.foodly.foodly.Meal.MealDetail;
+import com.example.foodly.foodly.Meal.MealName;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
@@ -21,6 +26,15 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), SignUp.class);
                 startActivityForResult(myIntent, 0);
+            }
+
+        });
+
+        Button next1 = (Button) findViewById(R.id.btnLogin);
+        next1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent1 = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent1, 0);
             }
 
         });
