@@ -17,6 +17,14 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
 
+        Button next1 = (Button) findViewById(R.id.btnSignup);
+        next1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent1 = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent1, 0);
+            }
+
+        });
 
     }
 }
