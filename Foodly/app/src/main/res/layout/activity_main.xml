@@ -29,14 +29,11 @@
         android:layoutDirection="rtl"
         app:tabTextAppearance="@style/MyCustomTabText"
         app:tabMode="fixed"
+
         app:tabTextColor="@color/grey"
         android:theme="@style/ThemeOverlay.MaterialComponents.Light">
 
     </com.google.android.material.tabs.TabLayout>
 
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
 
 </RelativeLayout>

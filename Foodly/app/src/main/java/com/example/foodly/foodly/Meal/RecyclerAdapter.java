@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.foodly.foodly.R;
 
 import java.util.List;
@@ -39,7 +42,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
     @Override
     public void onBindViewHolder(final MealViewHolder holder, int position) {
 
-        holder.mImage.setImageResource(mMealList.get(position).getMealImage());
+        Glide.with(holder.mImage.getContext())
+                .load(mMealList.get(position).getMealImage())
+                .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.RESOURCE))
+                .into(holder.mImage);
+    // holder.mImage.setImageResource(mMealList.get(position).getMealImage());
        holder.mTitle.setText(mMealList.get(position).getMealName());
        holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
