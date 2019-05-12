@@ -13,7 +13,7 @@
         <activity
             android:name=".Meal.MealDetail"
             android:label="@string/title_activity_meal_detail"></activity>
-        <activity android:name=".Meal.MealName" />
+        <activity android:name=".Meal.MealName" ></activity>
 
         <activity
             android:name=".MainActivity"
