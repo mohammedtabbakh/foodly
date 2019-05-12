@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.7.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/fdc967bfd43ac1e7b4b598189545c673/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/jetified-gifdecoder-4.7.1.aar/cdc28027a2d89f9fa4b7c3f1cd190e19/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/fdc967bfd43ac1e7b4b598189545c673/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/fdc967bfd43ac1e7b4b598189545c673/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/jetified-gifdecoder-4.7.1.aar/cdc28027a2d89f9fa4b7c3f1cd190e19/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/jetified-gifdecoder-4.7.1.aar/cdc28027a2d89f9fa4b7c3f1cd190e19/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

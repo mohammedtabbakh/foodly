@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.sephiroth74:NumberSlidingPicker:1.0.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/NumberSlidingPicker-1.0.3.aar/3ab4e122c5cf625f256602cbe8418f29/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/NumberSlidingPicker-1.0.3.aar/3ab4e122c5cf625f256602cbe8418f29/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
