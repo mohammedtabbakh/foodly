@@ -8,4 +8,6 @@
     <color name="deep_orange_500">#FF5722</color>
     <color name="white">#FFFFFF</color>
     <color name="green">#335233</color>
+    <color name="color_selected">#3C8A44</color>
+
 </resources>

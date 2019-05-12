@@ -9,20 +9,50 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.foodly.foodly.R;
 
 public class Meal extends Fragment {
     @Nullable
 
-    Button mealLayout;
+    public ImageView eastBtn,westBtn,healthyBtn,entreesBtn;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.meal, container, false);
 
-        mealLayout= view.findViewById(R.id.meal_layout_btn);
 
-        mealLayout.setOnClickListener(new View.OnClickListener() {
+        eastBtn= view.findViewById(R.id.east_btn);
+        westBtn= view.findViewById(R.id.west_btn);
+        healthyBtn= view.findViewById(R.id.health_btn);
+        entreesBtn= view.findViewById(R.id.entrees_btn);
+
+
+        eastBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                startActivity(intent);
+            }
+        });
+        westBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                startActivity(intent);
+            }
+        });
+        healthyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                startActivity(intent);
+            }
+        });
+        entreesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -31,8 +61,8 @@ public class Meal extends Fragment {
             }
         });
 
-        return view;
 
+        return view;
 
     }
     @Override

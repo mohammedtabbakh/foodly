@@ -1,4 +1,4 @@
-package com.example.foodly.foodly.Meal;
+package com.example.foodly.foodly.Meal.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.foodly.foodly.Meal.MealData;
+import com.example.foodly.foodly.Meal.MealDetail;
 import com.example.foodly.foodly.R;
 
 import java.util.List;
@@ -51,7 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
        holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(mContext,MealDetail.class);
+                Intent mIntent = new Intent(mContext, MealDetail.class);
                 mIntent.putExtra("Title", mMealList.get(holder.getAdapterPosition()).getMealName());
                 mIntent.putExtra("Image", mMealList.get(holder.getAdapterPosition()).getMealImage());
                 mContext.startActivity(mIntent);

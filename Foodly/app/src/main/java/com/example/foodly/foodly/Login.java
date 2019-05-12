@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 
-import com.example.foodly.foodly.Meal.Meal;
-import com.example.foodly.foodly.Meal.MealDetail;
-import com.example.foodly.foodly.Meal.MealName;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +18,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        Button next = (Button) findViewById(R.id.btnSignup);
+        Button next = findViewById(R.id.btnSignup);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), SignUp.class);
@@ -30,7 +27,7 @@ public class Login extends AppCompatActivity {
 
         });
 
-        Button next1 = (Button) findViewById(R.id.btnLogin);
+        Button next1 = findViewById(R.id.btnLogin);
         next1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent1 = new Intent(view.getContext(), MainActivity.class);
