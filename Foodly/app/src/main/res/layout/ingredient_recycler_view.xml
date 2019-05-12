@@ -9,31 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="10">
+        android:weightSum="10"
+        android:layout_margin="5dp">
 
 
 
         <TextView
-
+            android:id="@+id/ingr_name"
             android:layout_width="0dp"
             android:layout_weight="8"
             android:layout_height="wrap_content"
-            android:text="ingredient name"/>
+            android:text=" اسم المكون "/>
 
-        <it.sephiroth.android.library.numberpicker.NumberPicker
-        android:layout_width="0dp"
+       <ImageView
+           android:id="@+id/ingr_selector"
+           android:layout_width="0dp"
+           android:layout_weight="2"
 
-        android:layout_weight="2"
-        android:layout_height="match_parent"
-        android:layout_marginRight="5dp"
-            app:picker_min="0"
-            app:picker_max="100"
-            app:picker_stepSize="1"
-            app:picker_tracker="exponential"
-            android:orientation="horizontal"
-            style="@style/NumberPicker.Filled">
-
-    </it.sephiroth.android.library.numberpicker.NumberPicker>
+           android:layout_height="wrap_content"
+           android:src="@drawable/ingredient_selector"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
