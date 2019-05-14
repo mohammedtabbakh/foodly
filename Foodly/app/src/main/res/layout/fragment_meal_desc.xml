@@ -6,16 +6,12 @@
     android:orientation="vertical">
 <TextView
     android:id="@+id/textview2"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:textAlignment="center"
-    android:text="تفاصيل الوجبة"/>
+    android:layout_alignParentTop="true"
+    android:textSize="25dp"
+    android:text="هنا توجد تفاصيل عن الوجبة و معلومات عن منشأها "/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textview2"
-        android:layout_alignLeft="@id/textview2"/>
+
 
 </RelativeLayout>

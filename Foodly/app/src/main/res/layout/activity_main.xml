@@ -23,12 +23,15 @@
         android:id="@+id/tab_layout1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:tabSelectedTextColor="@color/color_selected"
         android:background="#ffffff"
         app:tabIndicatorHeight="0dp"
         android:layout_alignParentBottom="true"
         android:layoutDirection="rtl"
         app:tabTextAppearance="@style/MyCustomTabText"
         app:tabMode="fixed"
+
+
 
         app:tabTextColor="@color/grey"
         android:theme="@style/ThemeOverlay.MaterialComponents.Light">

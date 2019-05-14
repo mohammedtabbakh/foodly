@@ -1,6 +1,9 @@
 package com.example.foodly.foodly.Meal;
 
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.foodly.foodly.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -27,7 +30,7 @@ public class MealDetail extends AppCompatActivity {
 
    FragmentMealDetail MealDetail=new FragmentMealDetail();
     FragmentMealDesc MealDesc=new FragmentMealDesc();
-    ImageView mMeal;
+    ImageView mMealImage;
     TextView mMealTitle;
     TabLayout tabLayout;
     Fragment fragment1= MealDetail;
@@ -38,16 +41,20 @@ public class MealDetail extends AppCompatActivity {
         setContentView(R.layout.meal_detail);
 
 
-        mMeal = findViewById(R.id.meal_image);
+        mMealImage = findViewById(R.id.mealImage);
         mMealTitle = findViewById(R.id.meal_title);
 
 
-//        Bundle mBundle = getIntent().getExtras();
-//        if (mBundle != null) {
-//            mMealTitle.setText(mBundle.getString("Title"));
-//            mMeal.setImageResource(mBundle.getInt("Image"));
-//
-//        }
+        Bundle mBundle = getIntent().getExtras();
+        if (mBundle != null) {
+            mMealTitle.setText(mBundle.getString("Title"));
+//            mMealImage.setImageResource(mBundle.getInt("Image"));
+            Glide.with(mMealImage.getContext())
+                    .load(mBundle.getInt("Image"))
+                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
+                    .into(mMealImage);
+
+        }
         initComponent();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame2,fragment1).commit();
 

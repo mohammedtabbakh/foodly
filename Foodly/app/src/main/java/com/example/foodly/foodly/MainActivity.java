@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        tab_layout.getTabAt(0).getIcon().setColorFilter(getResources().getColor(R.color.green), PorterDuff.Mode.SRC_IN);
+        tab_layout.getTabAt(0).getIcon().setColorFilter(getResources().getColor(R.color.color_selected), PorterDuff.Mode.SRC_IN);
         tab_layout.getTabAt(1).getIcon().setColorFilter(getResources().getColor(R.color.grey), PorterDuff.Mode.SRC_IN);
         tab_layout.getTabAt(2).getIcon().setColorFilter(getResources().getColor(R.color.grey), PorterDuff.Mode.SRC_IN);
         tab_layout.getTabAt(3).getIcon().setColorFilter(getResources().getColor(R.color.grey), PorterDuff.Mode.SRC_IN);
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
 
             public void onTabSelected(TabLayout.Tab tab) {
-                tab.getIcon().setColorFilter(getResources().getColor(R.color.green), PorterDuff.Mode.SRC_IN);
+                tab.getIcon().setColorFilter(getResources().getColor(R.color.color_selected), PorterDuff.Mode.SRC_IN);
                 switch (tab.getPosition()) {
                     case 0:
                         fragment = home;
@@ -126,4 +126,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }

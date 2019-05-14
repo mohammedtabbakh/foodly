@@ -4,6 +4,7 @@ package com.example.foodly.foodly.Meal;
 import android.os.Bundle;
 
 
+import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
 import com.example.foodly.foodly.R;
 
 import java.util.ArrayList;

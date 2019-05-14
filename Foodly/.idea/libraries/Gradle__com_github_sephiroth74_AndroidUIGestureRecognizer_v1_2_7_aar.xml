@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.sephiroth74:AndroidUIGestureRecognizer:v1.2.7@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/AndroidUIGestureRecognizer-v1.2.7.aar/d47785d426ba021c24a320810c33ca02/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.6-all/caches/transforms-1/files-1.1/AndroidUIGestureRecognizer-v1.2.7.aar/d47785d426ba021c24a320810c33ca02/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
