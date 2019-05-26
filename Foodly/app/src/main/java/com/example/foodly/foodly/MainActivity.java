@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         tab_layout = findViewById(R.id.tab_layout1);
         tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_home).setText(R.string.home), 0);
-        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_search).setText(R.string.meal), 1);
-        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_add_box).setText(R.string.mealsuggest), 2);
-        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_favorite_border).setText(R.string.order), 3);
-        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.ic_person).setText(R.string.account), 4);
+        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.meal).setText(R.string.meal), 1);
+        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.suggest).setText(R.string.mealsuggest), 2);
+        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.order).setText(R.string.order), 3);
+        tab_layout.addTab(tab_layout.newTab().setIcon(R.drawable.user).setText(R.string.account), 4);
 
 
 
