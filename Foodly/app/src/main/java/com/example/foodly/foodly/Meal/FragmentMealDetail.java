@@ -3,13 +3,16 @@ package com.example.foodly.foodly.Meal;
 
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.foodly.foodly.Meal.adapter.MealDetailAdapter;
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
 import com.example.foodly.foodly.R;
+import com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,14 +26,26 @@ public class FragmentMealDetail extends Fragment  {
 
     RecyclerView IngrRecyclerView;
     List<MealIngrData> MealIngrList;
-
     MealIngrData mMealIngrData;
+    FloatingActionButton fab;
+
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_meal_detail, container, false);
 
         IngrRecyclerView = view.findViewById(R.id.ingr_recycler);
+        fab = view.findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Toast  toast= Toast.makeText(getActivity(),"صحتين و هنا سلفاً D:",Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER ,0,0);
+            toast.show();
+
+            }
+        });
 
         IngrRecyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager=new LinearLayoutManager(view.getContext());

@@ -19,7 +19,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="250dp">
 
             <ImageView
                 android:id="@+id/mealImage"
@@ -62,10 +62,8 @@
             android:layout_height="wrap_content"
             app:tabMode="fixed"
             app:tabTextColor="@color/green"
-            android:background="@color/grey_less"
+            android:background="@color/white"
             android:layoutDirection="rtl"
-
-
             android:theme="@style/ThemeOverlay.MaterialComponents.Light">
 
         </com.google.android.material.tabs.TabLayout>

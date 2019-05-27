@@ -50,13 +50,13 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
             public void onClick(View v) {
 //                holder.ingrSelector.setImageResource(R.drawable.image_not_selected);
 
-                if(count==0) {
-                    count++;
+                if(!v.isSelected()) {
+
                     v.setSelected(true);
                 }
-                else
+                else if(v.isSelected())
                 {
-                    count=0;
+
                     v.setSelected(false);
                 }
 
