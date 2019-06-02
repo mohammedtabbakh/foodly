@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 
@@ -14,14 +15,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import Models.CartItem;
 
 public class Order extends Fragment {
 
     ListView itemsListView;
-    CartItemsAdapter  itemsAdapter;
+    CartItemsAdapter itemsAdapter;
     ArrayList<CartItem> items;
+    Button buyingButton;
 
     @Nullable
     @Override
@@ -34,16 +37,44 @@ public class Order extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        buyingButton = getView().findViewById(R.id.buyingButton);
+
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("الطلبات");
         items = new ArrayList<CartItem>();
-        items.add(new CartItem(){{setItemName("فول"); }});
-        items.add(new CartItem(){{setItemName("حمص"); }});
-        items.add(new CartItem(){{setItemName("تفاح"); }});
-        items.add(new CartItem(){{setItemName("برتقال"); }});
+        items.add(new CartItem() {{
+            setItemName("فول");
+        }});
+        items.add(new CartItem() {{
+            setItemName("حمص");
+        }});
+        items.add(new CartItem() {{
+            setItemName("تفاح");
+        }});
+        items.add(new CartItem() {{
+            setItemName("برتقال");
+        }});
 
         itemsListView = getView().findViewById(R.id.items_list_view);
-        itemsAdapter = new CartItemsAdapter(getContext(),items);
+        itemsAdapter = new CartItemsAdapter(getContext(), items);
         itemsListView.setAdapter(itemsAdapter);
+        buyingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBuyingButtonClicked();
+            }
+        });
+    }
+
+    private void onBuyingButtonClicked() {
+        ArrayList<CartItem> cartlist =new ArrayList<CartItem>() ;
+        for (int i =0;i<itemsAdapter.getCount();i++)
+        {
+            CartItem item =itemsAdapter.getItem(i);
+            if (item.isChecked()){
+                cartlist.add(item);
+            }
+        }
+
     }
 }

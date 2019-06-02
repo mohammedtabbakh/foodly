@@ -4,7 +4,7 @@ public class CartItem {
     private double ItemCount;
     private int Item;
     private String itemName;
-
+private boolean IsChecked;
 
     public double getItemCount() {
         return ItemCount;
@@ -28,5 +28,13 @@ public class CartItem {
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    public boolean isChecked() {
+        return IsChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        IsChecked = checked;
     }
 }
