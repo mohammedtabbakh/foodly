@@ -27,20 +27,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <Button
-        android:id="@+id/buyingButton"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="120dp"
+        app:cornerRadius="20dp"
         android:fontFamily="cairo"
-
+        android:gravity="center"
         android:text="شراء"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/items_list_view" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

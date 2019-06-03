@@ -1,4 +1,4 @@
-package Models;
+package com.example.foodly.foodly.Order.Models;
 
 public class CartItem {
     private double ItemCount;

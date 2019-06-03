@@ -3,7 +3,6 @@ package com.example.foodly.foodly.Order;
 import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.NumberPicker;
-import android.widget.TextView;
 
 import com.example.foodly.foodly.R;
 
 import java.util.ArrayList;
 
-import Models.CartItem;
+import com.example.foodly.foodly.Order.Models.CartItem;
 
 public class CartItemsAdapter extends ArrayAdapter<CartItem> {
     public CartItemsAdapter(Context context, ArrayList<CartItem> cartItems) {

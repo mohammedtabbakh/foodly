@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -15,9 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import Models.CartItem;
+import com.example.foodly.foodly.Order.Models.CartItem;
 
 public class Order extends Fragment {
 
@@ -37,7 +35,7 @@ public class Order extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        buyingButton = getView().findViewById(R.id.buyingButton);
+        buyingButton = getView().findViewById(R.id.buyButton);
 
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("الطلبات");
