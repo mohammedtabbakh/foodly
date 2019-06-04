@@ -35,7 +35,7 @@ public class Order extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        buyingButton = getView().findViewById(R.id.buyButton);
+        buyingButton = getView().findViewById(R.id.addButton);
 
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("الطلبات");
