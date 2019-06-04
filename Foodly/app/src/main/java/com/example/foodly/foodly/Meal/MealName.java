@@ -5,7 +5,8 @@ import android.os.Bundle;
 
 
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
-import com.example.foodly.foodly.Meal.adapter.models.MealData;
+
+import com.example.foodly.foodly.Meal.models.MealData;
 import com.example.foodly.foodly.R;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class MealName extends AppCompatActivity {
     RecyclerView mRecyclerView;
     List<MealData> mMealList;
     MealData mMealData;
+
 
 
     @Override
@@ -53,9 +55,6 @@ public class MealName extends AppCompatActivity {
         mMealData = new MealData("يبرق",
                 R.drawable.yabraq);
         mMealList.add(mMealData);
-
-
-
 
 
 

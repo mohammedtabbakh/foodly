@@ -10,19 +10,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="محتار شو بدك تطبخ ؟
-حطلتا اشفي عندك بالبراد لحتى نقترحلك طبخات عأساسهن"
-        android:textAlignment="center"
+        android:text="محتار شو بدك تطبخ ؟"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_margin="10dp"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="حطلنا اشفي عندك بالبراد لحتى نقترحلك طبخات عأساسهن"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:entries="@array/ingredient_array"
-
+        
+        android:layout_gravity="center"
+        android:gravity="center"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
         >
 
     </Spinner>
@@ -70,7 +80,6 @@
         android:textSize="25dp"
         android:layout_gravity="right"
         android:gravity="right"
-
         android:layout_margin="10dp"
         android:textColor="@color/green"
         android:textStyle="bold"/>

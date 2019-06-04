@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.foodly.foodly.Meal.adapter.MealDetailAdapter;
-import com.example.foodly.foodly.Meal.adapter.models.MealIngrData;
+import com.example.foodly.foodly.Meal.models.MealIngrData;
 import com.example.foodly.foodly.R;
 import com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton;
 

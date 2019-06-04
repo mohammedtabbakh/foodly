@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.foodly.foodly.Meal.adapter.models.MealIngrData;
+import com.example.foodly.foodly.Meal.models.MealIngrData;
 import com.example.foodly.foodly.R;
 
 import java.util.List;

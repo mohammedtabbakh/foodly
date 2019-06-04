@@ -1,16 +1,19 @@
 package com.example.foodly.foodly.MealSuggest;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.example.foodly.foodly.Meal.MealName;
+
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
-import com.example.foodly.foodly.Meal.adapter.models.MealData;
+import com.example.foodly.foodly.Meal.models.MealData;
+
 import com.example.foodly.foodly.R;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -23,14 +26,17 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import static androidx.constraintlayout.widget.Constraints.TAG;
+
 public class MealSuggest extends Fragment {
 
-    RecyclerView mRecyclerView;
-    List<MealData> MealSuggestedList;
-    MealData mMealData;
-    Spinner spinner;
-    ChipGroup chipGroup;
-    Button addButton;
+    private RecyclerView mRecyclerView;
+    private List<MealData> MealSuggestedList;
+    private MealData mMealData;
+    private Spinner spinner;
+    private ChipGroup chipGroup;
+    private Button addButton;
+    private int myPosition=0;
 
 
     @Nullable
@@ -55,10 +61,19 @@ public class MealSuggest extends Fragment {
                 R.drawable.fasolie);
         MealSuggestedList.add(mMealData);
 
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(view.getContext(), MealSuggestedList);
+
+        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(view.getContext(),MealSuggestedList);
         mRecyclerView.setAdapter(recyclerAdapter);
 
+        List<String> ingredients = new ArrayList<>();
+        ingredients.add("بندورة");
+        ingredients.add("خيار");
+        ingredients.add("لحمة");
+        ingredients.add("ورق عنب");
 
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(view.getContext(),R.layout.ingredient_spinner,R.id.ingrTv,ingredients);
+
+        spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -71,11 +86,19 @@ public class MealSuggest extends Fragment {
             }
         });
 
+
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int position = spinner.getSelectedItemPosition();
+                if(myPosition == position){
+                    return; //do nothing
+                }
+
+                myPosition= position;
+
                 Chip chip= new Chip(spinner.getContext());
-                chip.setText(spinner.getSelectedItem().toString());
+                chip.setText(spinner.getItemAtPosition(position).toString());
                 chip.setCloseIconVisible(true);
                 chip.setCheckable(false);
                 chip.setClickable(false);
