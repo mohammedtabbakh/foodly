@@ -33,4 +33,5 @@ dependencies {
     implementation 'com.github.sephiroth74:NumberSlidingPicker:1.0.3'
 
     implementation 'com.robertlevonyan.view:CustomFloatingActionButton:2.1.1'
+
 }

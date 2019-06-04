@@ -1,7 +1,6 @@
 package com.example.foodly.foodly.MealSuggest;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,17 +25,16 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class MealSuggest extends Fragment {
 
-    private RecyclerView mRecyclerView;
+    private RecyclerView SuggestRecyclerView;
     private List<MealData> MealSuggestedList;
-    private MealData mMealData;
+    private MealData mealData;
     private Spinner spinner;
     private ChipGroup chipGroup;
     private Button addButton;
-    private int myPosition=0;
+    private int myPosition=-1;
 
 
     @Nullable
@@ -47,23 +45,23 @@ public class MealSuggest extends Fragment {
         addButton=view.findViewById(R.id.addButton);
         chipGroup=view.findViewById(R.id.chip_group);
         spinner= view.findViewById(R.id.spinner);
-        mRecyclerView = view.findViewById(R.id.suggest_recycler);
+        SuggestRecyclerView = view.findViewById(R.id.suggest_recycler);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(view.getContext(), 2);
-        mRecyclerView.setLayoutManager(mGridLayoutManager);
+        SuggestRecyclerView.setLayoutManager(mGridLayoutManager);
 
         MealSuggestedList = new ArrayList<>();
 
-        mMealData = new MealData("كبة",
+        mealData = new MealData("كبة",
                 R.drawable.keba);
-        MealSuggestedList.add(mMealData);
+        MealSuggestedList.add(mealData);
 
-        mMealData = new MealData("فاصولية بيضاء",
+        mealData = new MealData("فاصولية بيضاء",
                 R.drawable.fasolie);
-        MealSuggestedList.add(mMealData);
+        MealSuggestedList.add(mealData);
 
 
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(view.getContext(),MealSuggestedList);
-        mRecyclerView.setAdapter(recyclerAdapter);
+        SuggestRecyclerView.setAdapter(recyclerAdapter);
 
         List<String> ingredients = new ArrayList<>();
         ingredients.add("بندورة");
@@ -74,9 +72,11 @@ public class MealSuggest extends Fragment {
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(view.getContext(),R.layout.ingredient_spinner,R.id.ingrTv,ingredients);
 
         spinner.setAdapter(spinnerAdapter);
+        spinner.setSelection(0);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
 
             }
 
@@ -96,7 +96,6 @@ public class MealSuggest extends Fragment {
                 }
 
                 myPosition= position;
-
                 Chip chip= new Chip(spinner.getContext());
                 chip.setText(spinner.getItemAtPosition(position).toString());
                 chip.setCloseIconVisible(true);
