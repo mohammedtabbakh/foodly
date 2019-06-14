@@ -8,10 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-
-
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
-import com.example.foodly.foodly.Meal.models.MealData;
 
 import com.example.foodly.foodly.R;
 import com.google.android.material.chip.Chip;
@@ -25,12 +22,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import Models.Meal;
+
 
 public class MealSuggest extends Fragment {
 
     private RecyclerView SuggestRecyclerView;
-    private List<MealData> MealSuggestedList;
-    private MealData mealData;
+    private List<Meal> MealSuggestedList;
+    private Meal mealData;
     private Spinner spinner;
     private ChipGroup chipGroup;
     private Button addButton;
@@ -51,12 +50,10 @@ public class MealSuggest extends Fragment {
 
         MealSuggestedList = new ArrayList<>();
 
-        mealData = new MealData("كبة",
-                R.drawable.keba);
+        mealData = new Meal("كبة");
         MealSuggestedList.add(mealData);
 
-        mealData = new MealData("فاصولية بيضاء",
-                R.drawable.fasolie);
+        mealData = new Meal("فاصولية بيضاء");
         MealSuggestedList.add(mealData);
 
 

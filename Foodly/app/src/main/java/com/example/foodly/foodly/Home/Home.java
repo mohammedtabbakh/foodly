@@ -11,20 +11,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
-import com.example.foodly.foodly.Meal.models.MealData;
 import com.example.foodly.foodly.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import Models.Meal;
 
 
 public class Home extends Fragment {
 
     private RecyclerView SuggestHomeRecyclerView;
     private RecyclerView MostDemandRecyclerView;
-    private MealData mealData;
-    private List<MealData> SuggestHomeList;
-    private List<MealData> MostDemandList;
+    private Meal mealData;
+    private List<Meal> SuggestHomeList;
+    private List<Meal> MostDemandList;
 
 
     @Nullable
@@ -34,7 +35,7 @@ public class Home extends Fragment {
        View view = inflater.inflate(R.layout.home, container, false);
 
        SuggestHomeRecyclerView=view.findViewById(R.id.suggested_home_recycler);
-       MostDemandRecyclerView=view.findViewById(R.id.most_Demand_recycler);
+       MostDemandRecyclerView=view.findViewById(R.id.mostDemandRecycler);
 
         GridLayoutManager GridLayoutManager1 = new GridLayoutManager(view.getContext(), 3);
         SuggestHomeRecyclerView.setLayoutManager(GridLayoutManager1);
@@ -44,35 +45,25 @@ public class Home extends Fragment {
 
        MostDemandList=new ArrayList<>();
 
-        mealData = new MealData("يبرق",
-                R.drawable.yabraq);
+        mealData = new Meal("يبرق");
         MostDemandList.add(mealData);
 
-        mealData = new MealData("فريكة",
-                R.drawable.frike);
+        mealData = new Meal("فريكة");
         MostDemandList.add(mealData);
 
-        mealData = new MealData("يبرق",
-                R.drawable.yabraq);
+        mealData = new Meal("يبرق");
         MostDemandList.add(mealData);
-
-
-
 
 
         SuggestHomeList=new ArrayList<>();
 
-
-        mealData = new MealData("فاصولية بيضاء",
-                R.drawable.fasolie);
+        mealData = new Meal("فاصولية بيضاء");
         SuggestHomeList.add(mealData);
 
-        mealData = new MealData("فريكة",
-                R.drawable.frike);
+        mealData = new Meal("فريكة");
         SuggestHomeList.add(mealData);
 
-        mealData = new MealData("فاصولية بيضاء",
-                R.drawable.fasolie);
+        mealData = new Meal("فاصولية بيضاء");
         SuggestHomeList.add(mealData);
 
 

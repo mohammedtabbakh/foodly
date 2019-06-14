@@ -8,7 +8,6 @@ import com.example.foodly.foodly.Api.ApiClient;
 import com.example.foodly.foodly.Api.ApiEndPoints;
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
 
-import com.example.foodly.foodly.Meal.models.MealData;
 import com.example.foodly.foodly.R;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class MealName extends AppCompatActivity {
 
 
     RecyclerView mRecyclerView;
-    List<Meal> MealsList;
+    List<Models.Meal> MealsList;
     Meal mMealData;
 
 

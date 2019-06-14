@@ -3,7 +3,6 @@ package com.example.foodly.foodly.Meal.adapter;
 import android.content.Context;
 import android.content.Intent;
 
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,18 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-
-import com.example.foodly.foodly.Meal.Meal;
-import com.example.foodly.foodly.Meal.MealData;
-
-import com.example.foodly.foodly.Meal.models.MealData;
- 
 import com.example.foodly.foodly.Meal.MealDetail;
 import com.example.foodly.foodly.R;
-
-import java.io.File;
 import java.util.List;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,7 +24,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
 
 
 
-    public RecyclerAdapter(Context mContext, List<Models.Meal>mealsList) {
+    public RecyclerAdapter(Context mContext, List<Models.Meal> mealsList) {
         this.mContext = mContext;
         this.MealsList = mealsList;
     }
@@ -84,13 +74,11 @@ class MealViewHolder extends RecyclerView.ViewHolder {
     TextView mTitle;
     CardView mCardView;
 
-
     MealViewHolder(View itemView) {
         super(itemView);
         mImage = itemView.findViewById(R.id.meal_image);
         mTitle = itemView.findViewById(R.id.meal_title);
         mCardView = itemView.findViewById(R.id.cardview);
-
 
     }
 }
