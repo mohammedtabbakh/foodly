@@ -29,7 +29,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:elevation="0dp"
-
                 android:src="@drawable/keba" />
 
             <TextView
@@ -38,8 +37,6 @@
                 android:layout_height="75dp"
                 android:layout_alignBottom="@id/meal_image"
                 android:layout_gravity="center|bottom"
-
-
                 android:text="كبة"
                 android:textSize="50dp"
                 android:textColor="@color/white"
@@ -47,14 +44,6 @@
 
                 android:textStyle="bold" />
         </FrameLayout>
-
-
-
-
-
-
-
-
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -74,11 +63,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frame2"
-
     />
-
-
-
-
 
 </LinearLayout>

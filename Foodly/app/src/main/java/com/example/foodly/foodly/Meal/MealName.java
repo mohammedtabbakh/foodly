@@ -4,6 +4,8 @@ package com.example.foodly.foodly.Meal;
 import android.os.Bundle;
 
 
+import com.example.foodly.foodly.Api.ApiClient;
+import com.example.foodly.foodly.Api.ApiEndPoints;
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
 import com.example.foodly.foodly.R;
 
@@ -14,54 +16,50 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import Models.Meal;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class MealName extends AppCompatActivity {
 
+
     RecyclerView mRecyclerView;
-    List<MealData> mMealList;
-    MealData mMealData;
+    List<Meal> MealsList;
+    Meal mMealData;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meal_name);
+        MealsList=new ArrayList<>();
 
         mRecyclerView = findViewById(R.id.recyclerview);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(MealName.this, 3);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
-
-        mMealList = new ArrayList<>();
-
-        mMealData = new MealData("كبة",
-                R.drawable.keba);
-        mMealList.add(mMealData);
-
-        mMealData = new MealData("فاصولية بيضاء",
-                R.drawable.fasolie);
-        mMealList.add(mMealData);
-
-
-
-
-
-        mMealData = new MealData("فريكة",
-                R.drawable.frike);
-        mMealList.add(mMealData);
-
-        mMealData = new MealData("يبرق",
-                R.drawable.yabraq);
-        mMealList.add(mMealData);
-
-
-
-
-
-
-
-
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(MealName.this, mMealList);
+        final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(MealName.this, MealsList);
         mRecyclerView.setAdapter(recyclerAdapter);
+        ApiEndPoints apiEndPoints = ApiClient.getClient().create(ApiEndPoints.class);
+
+        apiEndPoints.GetAllMeals().enqueue(new Callback<List<Meal>>() {
+            @Override
+            public void onResponse(Call<List<Meal>> call, Response<List<Meal>> response) {
+                MealsList=response.body();
+                final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(MealName.this, MealsList);
+                mRecyclerView.setAdapter(recyclerAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<Meal>> call, Throwable t) {
+                mMealData = new Meal("كبة");
+                MealsList.add( new Meal("قريكة"));
+                MealsList.add(new Meal("فاصوليا"));
+            }
+        });
+
+
 
     }
 }

@@ -19,14 +19,16 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import Models.MealIngredient;
+
 public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder> {
 
     private Context context;
 
-    private List<MealIngrData> MealIngrList;
+    private List<MealIngredient> MealIngrList;
     int count=0;
 
-    public MealDetailAdapter(Context context, List<MealIngrData> MealIngrList) {
+    public MealDetailAdapter(Context context, List<MealIngredient> MealIngrList) {
         this.context = context;
         this.MealIngrList = MealIngrList;
     }
@@ -40,7 +42,7 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull final MealDetailViewHolder holder, int position) {
-        holder.ingrName.setText(MealIngrList.get(position).getMealingrName());
+        holder.ingrName.setText(MealIngrList.get(position).getIngredientName());
 //        Glide.with(holder.ingrSelector.getContext())
 //                .load(MealIngrList.get(position).getMealSelected())
 //                .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.RESOURCE))

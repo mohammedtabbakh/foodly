@@ -28,13 +28,14 @@ import android.widget.Toast;
 
 public class MealDetail extends AppCompatActivity {
 
-   FragmentMealDetail MealDetail=new FragmentMealDetail();
-    FragmentMealDesc MealDesc=new FragmentMealDesc();
     ImageView mMealImage;
     TextView mMealTitle;
     TabLayout tabLayout;
-    Fragment fragment1= MealDetail;
-    private static int cart_count=0;
+    String mealDescription;
+    int mealId;
+    Fragment fragment1 = new FragmentMealDetail(0);
+    private static int cart_count = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,31 +54,33 @@ public class MealDetail extends AppCompatActivity {
                     .load(mBundle.getInt("Image"))
                     .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
                     .into(mMealImage);
-
+            mealId = mBundle.getInt("id");
+            mealDescription = mBundle.getString("description");
+            fragment1 = new FragmentMealDetail(mealId);
         }
         initComponent();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame2,fragment1).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame2, fragment1).commit();
 
     }
+
     private void initComponent() {
 
         tabLayout = findViewById(R.id.tabs);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.mealDetail), 0);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.mealDesc), 1);
 
-
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
                     case 0:
-                        fragment1 = MealDetail;
+                        fragment1 = new FragmentMealDetail(mealId);
                         break;
                     case 1:
-                        fragment1 = MealDesc;
+                        fragment1 = new FragmentMealDesc(mealDescription);
                         break;
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame2,fragment1).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame2, fragment1).commit();
             }
 
             @Override
@@ -92,7 +95,6 @@ public class MealDetail extends AppCompatActivity {
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -104,7 +106,7 @@ public class MealDetail extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         int id = item.getItemId();
-                return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
 
     }
 
@@ -114,10 +116,7 @@ public class MealDetail extends AppCompatActivity {
         invalidateOptionsMenu();
         Snackbar.make(findViewById(R.id.main_content), "Added to cart !!", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
-
-
     }
-
 
     public void onRemoveProduct() {
         cart_count--;
