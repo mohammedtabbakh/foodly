@@ -7,10 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
-import com.example.foodly.foodly.Meal.MealIngrData;
+import com.example.foodly.foodly.Meal.models.MealIngrData;
 import com.example.foodly.foodly.R;
 
 import java.util.List;

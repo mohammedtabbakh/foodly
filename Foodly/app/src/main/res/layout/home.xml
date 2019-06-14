@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:gravity="center">
-
-
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="you're in the home tab :)"
-        android:gravity="center"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الوجبات الأكثر طلباً 🔥"
+        android:gravity="right"
+        android:layout_gravity="right"
 
-</RelativeLayout>
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/green"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/most_Demand_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الوجبات المقترحة "
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/green"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggested_home_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

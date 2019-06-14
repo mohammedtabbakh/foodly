@@ -1,4 +1,4 @@
-package com.example.foodly.foodly.Meal;
+package com.example.foodly.foodly.Meal.models;
 
   public class MealIngrData {
     private String MealingrName;

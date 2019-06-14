@@ -7,6 +7,8 @@ import android.os.Bundle;
 import com.example.foodly.foodly.Api.ApiClient;
 import com.example.foodly.foodly.Api.ApiEndPoints;
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
+
+import com.example.foodly.foodly.Meal.models.MealData;
 import com.example.foodly.foodly.R;
 
 import java.util.ArrayList;
@@ -30,6 +32,7 @@ public class MealName extends AppCompatActivity {
     Meal mMealData;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,7 @@ public class MealName extends AppCompatActivity {
         final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(MealName.this, MealsList);
         mRecyclerView.setAdapter(recyclerAdapter);
         ApiEndPoints apiEndPoints = ApiClient.getClient().create(ApiEndPoints.class);
+
 
         apiEndPoints.GetAllMeals().enqueue(new Callback<List<Meal>>() {
             @Override
@@ -58,8 +62,6 @@ public class MealName extends AppCompatActivity {
                 MealsList.add(new Meal("فاصوليا"));
             }
         });
-
-
 
     }
 }

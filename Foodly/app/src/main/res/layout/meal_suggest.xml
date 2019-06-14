@@ -10,15 +10,30 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="محتار شو بدك تطبخ ؟
-حطلتا اشفي عندك بالبراد لحتى نقترحلك طبخات عأساسهن"
-        android:textAlignment="center"
-        android:layout_margin="10dp"/>
-
-    <Spinner
+        android:text="محتار شو بدك تطبخ ؟"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="20sp"/>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="حطلنا اشفي عندك بالبراد لحتى نقترحلك طبخات عأساسهن"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:gravity="center"
+
+        style="@style/Widget.AppCompat.Spinner.DropDown"
         >
 
     </Spinner>
@@ -28,20 +43,26 @@
 
 
 <com.google.android.material.button.MaterialButton
-    android:id="@+id/buyButton"
+    android:id="@+id/addButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cornerRadius="25dp"
     android:layout_gravity="center"
     android:fontFamily="cairo"
     android:text="إضافة"
-    android:layout_margin="10dp"/>
+    android:layout_margin="10dp"
+    />
 
 
-    <com.google.android.material.chip.Chip
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"/>
+        android:visibility="gone"
+        android:layout_margin="10dp">
+
+    </com.google.android.material.chip.ChipGroup>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/suggestButton"
@@ -58,9 +79,11 @@
         android:layout_height="wrap_content"
         android:text="الوجبات المقترحة"
         android:textSize="25dp"
-        android:layout_gravity="end"
+        android:layout_gravity="right"
+        android:gravity="right"
         android:layout_margin="10dp"
-        android:textColor="@color/green"/>
+        android:textColor="@color/green"
+        android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/suggest_recycler"

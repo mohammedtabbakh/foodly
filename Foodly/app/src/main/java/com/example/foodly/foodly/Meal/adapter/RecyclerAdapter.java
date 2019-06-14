@@ -13,8 +13,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+
 import com.example.foodly.foodly.Meal.Meal;
 import com.example.foodly.foodly.Meal.MealData;
+
+import com.example.foodly.foodly.Meal.models.MealData;
+ 
 import com.example.foodly.foodly.Meal.MealDetail;
 import com.example.foodly.foodly.R;
 
