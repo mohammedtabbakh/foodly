@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.foodly.foodly.Meal.models.MealIngrData;
 import com.example.foodly.foodly.R;
 
 import java.util.List;
@@ -40,6 +39,7 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
     @Override
     public void onBindViewHolder(@NonNull final MealDetailViewHolder holder, int position) {
         holder.ingrName.setText(MealIngrList.get(position).getIngredientName());
+        holder.ingrQuantity.setText(MealIngrList.get(position).getQuantity());
 //        Glide.with(holder.ingrSelector.getContext())
 //                .load(MealIngrList.get(position).getMealSelected())
 //                .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.RESOURCE))
@@ -71,11 +71,13 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
 class MealDetailViewHolder extends RecyclerView.ViewHolder{
 
     TextView ingrName;
+    TextView ingrQuantity;
     ImageView ingrSelector;
     CardView cardViewIngr;
     public MealDetailViewHolder(@NonNull View itemView) {
         super(itemView);
         ingrName=itemView.findViewById(R.id.ingr_name);
+        ingrQuantity =itemView.findViewById(R.id.ingr_quantity);
         ingrSelector=itemView.findViewById(R.id.ingr_selector);
         cardViewIngr=itemView.findViewById(R.id.cardview_ingr);
 
