@@ -3,6 +3,7 @@ package com.example.foodly.foodly.Home;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -37,11 +38,14 @@ public class Home extends Fragment {
        SuggestHomeRecyclerView=view.findViewById(R.id.suggested_home_recycler);
        MostDemandRecyclerView=view.findViewById(R.id.mostDemandRecycler);
 
-        GridLayoutManager GridLayoutManager1 = new GridLayoutManager(view.getContext(), 3);
-        SuggestHomeRecyclerView.setLayoutManager(GridLayoutManager1);
 
-        GridLayoutManager mGridLayoutManager2 = new GridLayoutManager(view.getContext(), 3);
-        MostDemandRecyclerView.setLayoutManager(mGridLayoutManager2);
+
+        GridLayoutManager GridLayoutManager1 = new GridLayoutManager(view.getContext(), 3);
+        MostDemandRecyclerView.setLayoutManager(GridLayoutManager1);
+
+
+        LinearLayoutManager layoutManager= new LinearLayoutManager(view.getContext(),RecyclerView.HORIZONTAL,false);
+        SuggestHomeRecyclerView.setLayoutManager(layoutManager);
 
        MostDemandList=new ArrayList<>();
 
@@ -62,6 +66,13 @@ public class Home extends Fragment {
 
         mealData = new Meal("يبرق");
         MostDemandList.add(mealData);
+
+        mealData = new Meal("يبرق");
+        MostDemandList.add(mealData);
+
+
+
+
 
         SuggestHomeList=new ArrayList<>();
 
@@ -85,9 +96,12 @@ public class Home extends Fragment {
 
         RecyclerAdapter recyclerAdapter1 = new RecyclerAdapter(view.getContext(),MostDemandList);
         MostDemandRecyclerView.setAdapter(recyclerAdapter1);
+        MostDemandRecyclerView.setHasFixedSize(true);
 
         RecyclerAdapter recyclerAdapter2 = new RecyclerAdapter(view.getContext(),SuggestHomeList);
         SuggestHomeRecyclerView.setAdapter(recyclerAdapter2);
+
+
        return view;
     }
 
