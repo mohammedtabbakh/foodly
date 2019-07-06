@@ -11,7 +11,6 @@ import android.widget.Toast;
 import com.example.foodly.foodly.Api.ApiClient;
 import com.example.foodly.foodly.Api.ApiEndPoints;
 import com.example.foodly.foodly.Meal.adapter.MealDetailAdapter;
-import com.example.foodly.foodly.Meal.models.MealIngrData;
 import com.example.foodly.foodly.R;
 import com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton;
 
@@ -81,6 +80,18 @@ public class FragmentMealDetail extends Fragment {
 
             @Override
             public void onFailure(Call<List<MealIngredient>> call, Throwable t) {
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+                mealIngredients.add(new MealIngredient("d",0));
+
             Toast.makeText(getActivity(),"حدث خطأ غير متوقع",Toast.LENGTH_SHORT).show();
             }
         });

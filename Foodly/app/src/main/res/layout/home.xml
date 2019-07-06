@@ -6,12 +6,16 @@
 
 
     android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
 
+    </FrameLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="الوجبات الأكثر طلباً 🔥"
-        android:gravity="right"
+        android:gravity="center"
         android:layout_gravity="right"
         android:textSize="25dp"
         android:layout_margin="5dp"
@@ -21,25 +25,27 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mostDemandRecycler"
         android:layout_width="match_parent"
-        android:layout_height="295dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="2dp"
         android:layout_marginBottom="10dp"
-        android:isScrollContainer="true"
-        android:nestedScrollingEnabled="true"
 
-        android:scrollbars="vertical">
+        android:scrollbars="horizontal">
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
 
-
+    </FrameLayout>
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="الوجبات المقترحة "
-        android:gravity="right"
+        android:gravity="center"
         android:layout_gravity="right"
         android:textSize="25dp"
         android:layout_margin="5dp"
@@ -49,13 +55,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/suggested_home_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="295dp"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="2dp"
         android:layout_marginBottom="10dp"
-        android:scrollbars="horizontal">
+        android:nestedScrollingEnabled="true"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical">
 
     </androidx.recyclerview.widget.RecyclerView>
-    
+
 </LinearLayout>

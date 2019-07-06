@@ -39,13 +39,14 @@ public class Home extends Fragment {
        MostDemandRecyclerView=view.findViewById(R.id.mostDemandRecycler);
 
 
+        LinearLayoutManager layoutManager= new LinearLayoutManager(view.getContext(),RecyclerView.HORIZONTAL,false);
+        MostDemandRecyclerView.setLayoutManager(layoutManager);
+
 
         GridLayoutManager GridLayoutManager1 = new GridLayoutManager(view.getContext(), 3);
-        MostDemandRecyclerView.setLayoutManager(GridLayoutManager1);
+        SuggestHomeRecyclerView.setLayoutManager(GridLayoutManager1);
 
 
-        LinearLayoutManager layoutManager= new LinearLayoutManager(view.getContext(),RecyclerView.HORIZONTAL,false);
-        SuggestHomeRecyclerView.setLayoutManager(layoutManager);
 
        MostDemandList=new ArrayList<>();
 
@@ -96,10 +97,11 @@ public class Home extends Fragment {
 
         RecyclerAdapter recyclerAdapter1 = new RecyclerAdapter(view.getContext(),MostDemandList);
         MostDemandRecyclerView.setAdapter(recyclerAdapter1);
-        MostDemandRecyclerView.setHasFixedSize(true);
+
 
         RecyclerAdapter recyclerAdapter2 = new RecyclerAdapter(view.getContext(),SuggestHomeList);
         SuggestHomeRecyclerView.setAdapter(recyclerAdapter2);
+        SuggestHomeRecyclerView.setHasFixedSize(true);
 
 
        return view;

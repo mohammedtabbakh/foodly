@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/ingr_recycler"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="310dp"
        android:scrollbars="vertical">
 
    </androidx.recyclerview.widget.RecyclerView>
-
 
 
    <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
