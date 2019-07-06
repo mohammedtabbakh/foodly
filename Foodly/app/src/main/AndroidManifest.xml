@@ -36,7 +36,11 @@
             android:screenOrientation="portrait"
             android:name=".Meal.MealDetail"
             android:label="@string/title_activity_meal_detail"></activity>
-        <activity android:name=".Meal.MealName" ></activity>
+        <activity
+            android:name=".Meal.MealName"
+            android:screenOrientation="portrait"
+
+            ></activity>
 
 
      </application>

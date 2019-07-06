@@ -10,6 +10,7 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
 
 
 import com.example.foodly.foodly.Account.Account;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Order order=new Order();
     MealSuggest mealSuggest=new MealSuggest();
     Fragment fragment = home;
-
+    boolean openOrder=false;
 
 
     @Override
@@ -44,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame1,fragment).commit();
 //         getActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
         centerTitle();
+
+        Bundle extras=getIntent().getExtras();
+        if(extras!=null && extras.containsKey("openOrder"))
+            openOrder=extras.getBoolean("openOrder");
+        if(openOrder==true) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame1,order).addToBackStack(null).commit();
+
+        }
+
+
     }
 
     private void initComponent() {
@@ -97,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
     }

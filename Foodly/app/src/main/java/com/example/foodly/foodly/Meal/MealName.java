@@ -56,8 +56,7 @@ public class MealName extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Meal>> call, Throwable t) {
-                mMealData = new Meal("كبة");
-                MealsList.add( new Meal("قريكة"));
+                MealsList.add( new Meal("فريكة"));
                 MealsList.add(new Meal("فاصوليا"));
             }
         });

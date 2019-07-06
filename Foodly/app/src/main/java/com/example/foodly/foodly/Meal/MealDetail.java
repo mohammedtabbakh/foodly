@@ -4,6 +4,8 @@ package com.example.foodly.foodly.Meal;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.foodly.foodly.MainActivity;
+import com.example.foodly.foodly.Order.Order;
 import com.example.foodly.foodly.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -15,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -33,6 +36,7 @@ public class MealDetail extends AppCompatActivity {
     TabLayout tabLayout;
     String mealDescription;
     int mealId;
+    Order order=new Order();
     Fragment fragment1 = new FragmentMealDetail(0);
     private static int cart_count = 0;
 
@@ -106,6 +110,11 @@ public class MealDetail extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         int id = item.getItemId();
+        Intent myIntent1 = new Intent(getApplicationContext(),MainActivity.class);
+        myIntent1.putExtra("openOrder",true);
+        overridePendingTransition(0,0);
+        finish();
+        startActivity(myIntent1);
         return super.onOptionsItemSelected(item);
 
     }

@@ -54,6 +54,14 @@ public class Home extends Fragment {
         mealData = new Meal("يبرق");
         MostDemandList.add(mealData);
 
+        mealData = new Meal("يبرق");
+        MostDemandList.add(mealData);
+
+        mealData = new Meal("يبرق");
+        MostDemandList.add(mealData);
+
+        mealData = new Meal("يبرق");
+        MostDemandList.add(mealData);
 
         SuggestHomeList=new ArrayList<>();
 
@@ -66,7 +74,14 @@ public class Home extends Fragment {
         mealData = new Meal("فاصولية بيضاء");
         SuggestHomeList.add(mealData);
 
+        mealData = new Meal("فاصولية بيضاء");
+        SuggestHomeList.add(mealData);
 
+        mealData = new Meal("فاصولية بيضاء");
+        SuggestHomeList.add(mealData);
+
+        mealData = new Meal("فاصولية بيضاء");
+        SuggestHomeList.add(mealData);
 
         RecyclerAdapter recyclerAdapter1 = new RecyclerAdapter(view.getContext(),MostDemandList);
         MostDemandRecyclerView.setAdapter(recyclerAdapter1);

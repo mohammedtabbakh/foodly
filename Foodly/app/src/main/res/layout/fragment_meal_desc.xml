@@ -4,11 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<TextView
-    android:id="@+id/mealDescription"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:textSize="25dp"
-    android:text="هنا توجد تفاصيل عن الوجبة و معلومات عن منشأها "/>
+
+    <TextView
+        android:id="@+id/mealDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="vertical"
+        android:text="هنا توجد تفاصيل عن الوجبة و معلومات عن منشأها "
+        android:textSize="25dp" />
 </RelativeLayout>

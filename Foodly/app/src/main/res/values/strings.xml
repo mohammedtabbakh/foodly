@@ -14,10 +14,10 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string-array name="ingredient_array">
-        <item>بندورة</item>
-        <item>ورق عنب</item>
-        <item>خيار</item>
-        <item>لحمة</item>
+    <string-array name="city_array">
+        <item>سوريا</item>
+        <item>مصر</item>
+        <item>لبنان</item>
+        <item>العراق</item>
     </string-array>
 </resources>

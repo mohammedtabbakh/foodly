@@ -56,6 +56,15 @@ public class MealSuggest extends Fragment {
         mealData = new Meal("فاصولية بيضاء");
         MealSuggestedList.add(mealData);
 
+        mealData = new Meal("كبة");
+        MealSuggestedList.add(mealData);
+
+        mealData = new Meal("كبة");
+        MealSuggestedList.add(mealData);
+
+        mealData = new Meal("كبة");
+        MealSuggestedList.add(mealData);
+
 
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(view.getContext(),MealSuggestedList);
         SuggestRecyclerView.setAdapter(recyclerAdapter);

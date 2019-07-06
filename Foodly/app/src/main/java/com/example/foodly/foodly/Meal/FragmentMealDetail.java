@@ -32,13 +32,17 @@ public class FragmentMealDetail extends Fragment {
 
     RecyclerView IngrRecyclerView;
     MealDetailAdapter ingredientsAdapter;
-    MealIngrData mMealIngrData;
+
     FloatingActionButton fab;
     int mealId;
     List<MealIngredient> mealIngredients;
+    public FragmentMealDetail() {
+    }
+
     public FragmentMealDetail(int mealId) {
         this.mealId = mealId;
     }
+
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 

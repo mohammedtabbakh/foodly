@@ -21,7 +21,9 @@
             android:layout_marginBottom="-50dp"
             android:src="@drawable/east"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+
+            />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +42,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_marginBottom="3dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
 
         <ImageView
@@ -51,7 +54,8 @@
             android:layout_weight="2"
             android:src="@drawable/west"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:background="@drawable/shadow"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="75dp"
