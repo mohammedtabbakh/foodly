@@ -32,7 +32,7 @@ public class MealSuggest extends Fragment {
     private Meal mealData;
     private Spinner spinner;
     private ChipGroup chipGroup;
-    private Button addButton;
+    private Button addButton,suggestButton;
     private int myPosition=-1;
 
 
@@ -42,6 +42,7 @@ public class MealSuggest extends Fragment {
         final View view= inflater.inflate(R.layout.meal_suggest, container, false);
 
         addButton=view.findViewById(R.id.addButton);
+        suggestButton=view.findViewById(R.id.suggestButton);
         chipGroup=view.findViewById(R.id.chip_group);
         spinner= view.findViewById(R.id.spinner);
         SuggestRecyclerView = view.findViewById(R.id.suggest_recycler);
