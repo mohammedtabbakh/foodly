@@ -8,6 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import com.example.foodly.foodly.Api.ApiClient;
+import com.example.foodly.foodly.Api.ApiEndPoints;
+import com.example.foodly.foodly.Meal.MealName;
 import com.example.foodly.foodly.Meal.adapter.RecyclerAdapter;
 
 import com.example.foodly.foodly.R;
@@ -15,6 +19,7 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import androidx.annotation.Nullable;
@@ -23,6 +28,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import Models.Meal;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MealSuggest extends Fragment {
@@ -34,6 +42,8 @@ public class MealSuggest extends Fragment {
     private ChipGroup chipGroup;
     private Button addButton,suggestButton;
     private int myPosition=-1;
+    List<Models.Meal> MealsList;
+    int i;
 
 
     @Nullable
@@ -49,26 +59,50 @@ public class MealSuggest extends Fragment {
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(view.getContext(), 2);
         SuggestRecyclerView.setLayoutManager(mGridLayoutManager);
 
-        MealSuggestedList = new ArrayList<>();
+        ApiEndPoints apiEndPoints = ApiClient.getClient().create(ApiEndPoints.class);
 
-        mealData = new Meal("كبة");
-        MealSuggestedList.add(mealData);
-
-        mealData = new Meal("فاصولية بيضاء");
-        MealSuggestedList.add(mealData);
-
-        mealData = new Meal("كبة");
-        MealSuggestedList.add(mealData);
-
-        mealData = new Meal("كبة");
-        MealSuggestedList.add(mealData);
-
-        mealData = new Meal("كبة");
-        MealSuggestedList.add(mealData);
+        MealsList = new ArrayList<>();
 
 
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(view.getContext(),MealSuggestedList);
-        SuggestRecyclerView.setAdapter(recyclerAdapter);
+//        mealData = new Meal("كبة");
+//        MealSuggestedList.add(mealData);
+//
+//        mealData = new Meal("فاصولية بيضاء");
+//        MealSuggestedList.add(mealData);
+//
+//        mealData = new Meal("كبة");
+//        MealSuggestedList.add(mealData);
+//
+//        mealData = new Meal("كبة");
+//        MealSuggestedList.add(mealData);
+//
+//        mealData = new Meal("كبة");
+//        MealSuggestedList.add(mealData);
+
+        apiEndPoints.GetAllMeals().enqueue(new Callback<List<Meal>>() {
+            @Override
+            public void onResponse(Call<List<Meal>> call, Response<List<Meal>> response) {
+                MealsList = response.body();
+
+                MealSuggestedList = new ArrayList<>();
+                for(i=0;i<5;i++) {
+
+
+                    MealSuggestedList.add(MealsList.get(i));
+                }
+                    final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getContext(),MealSuggestedList);
+                    SuggestRecyclerView.setAdapter(recyclerAdapter);
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Meal>> call, Throwable t) {
+                MealsList.add(new Meal("فريكة"));
+                MealsList.add(new Meal("فاصوليا"));
+            }
+        });
+
+
 
         List<String> ingredients = new ArrayList<>();
         ingredients.add("بندورة");

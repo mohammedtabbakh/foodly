@@ -115,19 +115,20 @@ public class Home extends Fragment {
             public void onResponse(Call<List<Meal>> call, Response<List<Meal>> response) {
 
                 MealsList = response.body();
-
-                for( i=0;i<=MealsList.size()/2;i++)
+                MostDemandList=new ArrayList<>();
+                for( i=0;i<MealsList.size()/2;i++)
                 {
-                    MostDemandList=new ArrayList<>();
+
                     MostDemandList.add(MealsList.get(i));
 
                 }
                 RecyclerAdapter recyclerAdapter1 = new RecyclerAdapter(view.getContext(),MostDemandList);
                 MostDemandRecyclerView.setAdapter(recyclerAdapter1);
-
+                
+                SuggestHomeList=new ArrayList<>();
                 for( i=MealsList.size()/2;i<MealsList.size();i++)
                 {
-                    SuggestHomeList=new ArrayList<>();
+
                    SuggestHomeList.add(MealsList.get(i));
                 }
 
