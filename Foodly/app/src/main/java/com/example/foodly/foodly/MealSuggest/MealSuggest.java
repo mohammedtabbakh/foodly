@@ -151,7 +151,6 @@ public class MealSuggest extends Fragment {
                         }
                         final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getContext(),MealSuggestedList);
                         SuggestRecyclerView.setAdapter(recyclerAdapter);
-
                     }
 
                     @Override
