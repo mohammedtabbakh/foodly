@@ -124,7 +124,7 @@ public class Home extends Fragment {
                 }
                 RecyclerAdapter recyclerAdapter1 = new RecyclerAdapter(view.getContext(),MostDemandList);
                 MostDemandRecyclerView.setAdapter(recyclerAdapter1);
-                
+
                 SuggestHomeList=new ArrayList<>();
                 for( i=MealsList.size()/2;i<MealsList.size();i++)
                 {

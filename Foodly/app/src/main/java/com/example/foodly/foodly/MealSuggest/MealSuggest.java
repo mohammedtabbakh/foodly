@@ -59,7 +59,7 @@ public class MealSuggest extends Fragment {
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(view.getContext(), 2);
         SuggestRecyclerView.setLayoutManager(mGridLayoutManager);
 
-        ApiEndPoints apiEndPoints = ApiClient.getClient().create(ApiEndPoints.class);
+        final ApiEndPoints apiEndPoints = ApiClient.getClient().create(ApiEndPoints.class);
 
         MealsList = new ArrayList<>();
 
@@ -79,28 +79,6 @@ public class MealSuggest extends Fragment {
 //        mealData = new Meal("كبة");
 //        MealSuggestedList.add(mealData);
 
-        apiEndPoints.GetAllMeals().enqueue(new Callback<List<Meal>>() {
-            @Override
-            public void onResponse(Call<List<Meal>> call, Response<List<Meal>> response) {
-                MealsList = response.body();
-
-                MealSuggestedList = new ArrayList<>();
-                for(i=0;i<5;i++) {
-
-
-                    MealSuggestedList.add(MealsList.get(i));
-                }
-                    final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getContext(),MealSuggestedList);
-                    SuggestRecyclerView.setAdapter(recyclerAdapter);
-
-            }
-
-            @Override
-            public void onFailure(Call<List<Meal>> call, Throwable t) {
-                MealsList.add(new Meal("فريكة"));
-                MealsList.add(new Meal("فاصوليا"));
-            }
-        });
 
 
 
@@ -159,6 +137,31 @@ public class MealSuggest extends Fragment {
             }
         });
 
+        suggestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                apiEndPoints.GetAllMeals().enqueue(new Callback<List<Meal>>() {
+                    @Override
+                    public void onResponse(Call<List<Meal>> call, Response<List<Meal>> response) {
+                        MealsList = response.body();
+
+                        MealSuggestedList = new ArrayList<>();
+                        for(i=0;i<5;i++) {
+                            MealSuggestedList.add(MealsList.get(i));
+                        }
+                        final RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getContext(),MealSuggestedList);
+                        SuggestRecyclerView.setAdapter(recyclerAdapter);
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<Meal>> call, Throwable t) {
+                        MealsList.add(new Meal("فريكة"));
+                        MealsList.add(new Meal("فاصوليا"));
+                    }
+                });
+            }
+        });
         return view;
 
     }
