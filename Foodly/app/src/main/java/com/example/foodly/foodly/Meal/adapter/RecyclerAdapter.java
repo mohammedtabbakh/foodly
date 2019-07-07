@@ -45,7 +45,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
 //          Uri photoUri = Uri.fromFile(new File(MealsList.get(position).getPhoto()));
 
         Glide.with(mContext)
-                .load("http://lorempixel.com/400/200/food/")
+                .load(MealsList.get(position).getPhoto())
                 .apply(options)
                 .into(holder.mImage);
     // holder.mImage.setImageResource(mMealList.get(position).getMealImage());

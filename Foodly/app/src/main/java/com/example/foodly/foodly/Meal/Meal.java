@@ -31,9 +31,11 @@ public class Meal extends Fragment {
         eastBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                intent.putExtra("categoryName","شرقي");
+                intent.putExtra("categoryId",1);
                 startActivity(intent);
+
             }
         });
         westBtn.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +43,8 @@ public class Meal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                intent.putExtra("categoryName","غربي");
+                intent.putExtra("categoryId",2);
                 startActivity(intent);
             }
         });
@@ -49,6 +53,8 @@ public class Meal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                intent.putExtra("categoryName","صحي");
+                intent.putExtra("categoryId",3);
                 startActivity(intent);
             }
         });
@@ -57,10 +63,11 @@ public class Meal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
+                intent.putExtra("categoryName","مقبلات");
+                intent.putExtra("categoryId",4);
                 startActivity(intent);
             }
         });
-
 
         return view;
 

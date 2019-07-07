@@ -44,7 +44,10 @@ public class MealDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meal_detail);
-
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.mipmap.ic_launcher_round);
 
         mMealImage = findViewById(R.id.mealImage);
         mMealTitle = findViewById(R.id.meal_title);
@@ -55,8 +58,8 @@ public class MealDetail extends AppCompatActivity {
             mMealTitle.setText(mBundle.getString("Title"));
 //            mMealImage.setImageResource(mBundle.getInt("Image"));
             Glide.with(mMealImage.getContext())
-                    .load(mBundle.getInt("Image"))
-                    .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
+                    .load(mBundle.getString("Image"))
+                    .apply(options)
                     .into(mMealImage);
             mealId = mBundle.getInt("id");
             mealDescription = mBundle.getString("description");

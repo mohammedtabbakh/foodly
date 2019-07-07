@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.foodly.foodly.Order.OrderCompnents;
 import com.example.foodly.foodly.R;
 
 import java.util.List;
@@ -26,6 +27,9 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
 
     public MealDetailAdapter(Context context, List<MealIngredient> MealIngrList) {
         this.context = context;
+        if(MealIngrList==null)
+            this.MealIngrList.add(new MealIngredient("باذنجان",0));
+        else
         this.MealIngrList = MealIngrList;
     }
 
@@ -37,7 +41,7 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MealDetailViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MealDetailViewHolder holder, final int position) {
         holder.ingrName.setText(MealIngrList.get(position).getIngredientName());
 //        Glide.with(holder.ingrSelector.getContext())
 //                .load(MealIngrList.get(position).getMealSelected())
@@ -49,13 +53,13 @@ public class MealDetailAdapter extends RecyclerView.Adapter<MealDetailViewHolder
 //                holder.ingrSelector.setImageResource(R.drawable.image_not_selected);
 
                 if(!v.isSelected()) {
-
                     v.setSelected(true);
+                    OrderCompnents.Ingredeints.add(MealIngrList.get(position));
                 }
                 else if(v.isSelected())
                 {
-
                     v.setSelected(false);
+                    OrderCompnents.Ingredeints.remove(MealIngrList.get(position));
                 }
 
             }
