@@ -31,15 +31,18 @@
         android:id="@+id/buyBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cornerRadius="20dp"
+        android:layout_marginTop="569dp"
+        android:layout_marginBottom="114dp"
         android:fontFamily="cairo"
         android:gravity="center"
         android:text="شراء"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/items_list_view" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
