@@ -13,5 +13,6 @@ public interface ApiEndPoints {
     Call<List<Meal>> GetAllMeals();
     @GET("api/Meals/{id}/Ingredients")
     Call<List<MealIngredient>> GetMealIngredients(@Path("id") int id);
-
+    @GET("api/Category/{categoryId}/Meals")
+    Call<List<Meal>> GetMealsByCategory(@Path("categoryId") int categoryId);
 }
