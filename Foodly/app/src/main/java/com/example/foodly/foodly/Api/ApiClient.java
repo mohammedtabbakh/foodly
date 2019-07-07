@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    public static final String BASE_URL="http://192.168.1.105:45455/";
+    public static final String BASE_URL="http://mohammedtabbakh-001-site1.gtempurl.com";
     private static Retrofit retrofit = null;
 
 
