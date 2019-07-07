@@ -37,4 +37,8 @@ private boolean IsChecked;
     public void setChecked(boolean checked) {
         IsChecked = checked;
     }
+    public CartItem(String name){
+        this.itemName=name;
+    }
+   public CartItem(){}
 }

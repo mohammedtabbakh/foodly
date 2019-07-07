@@ -70,6 +70,10 @@ public class Order extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+for (int i=0;i<OrderCompnents.Ingredeints.size();i++)
+{
+    items.add(new CartItem(OrderCompnents.Ingredeints.get(i).getIngredientName()));
+}
 
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("الطلبات");
@@ -86,7 +90,10 @@ public class Order extends Fragment {
         items.add(new CartItem() {{
             setItemName("برتقال");
         }});
-
+        for (int i=0;i<OrderCompnents.Ingredeints.size();i++)
+        {
+            items.add(new CartItem(OrderCompnents.Ingredeints.get(i).getIngredientName()));
+        }
         itemsListView = getView().findViewById(R.id.items_list_view);
         itemsAdapter = new CartItemsAdapter(getContext(), items);
         itemsListView.setAdapter(itemsAdapter);
