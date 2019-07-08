@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
+import com.example.foodly.foodly.Constants;
 import com.example.foodly.foodly.Login;
 import com.example.foodly.foodly.MainActivity;
 import com.example.foodly.foodly.R;
@@ -17,6 +19,7 @@ import androidx.fragment.app.Fragment;
 
 public class Account extends Fragment {
     Button logout;
+    TextView scoreTextView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,5 +44,7 @@ public class Account extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("الحساب");
+        scoreTextView=getView().findViewById(R.id.userScore);
+        scoreTextView.setText(Integer.toString(Constants.userScore));
     }
 }

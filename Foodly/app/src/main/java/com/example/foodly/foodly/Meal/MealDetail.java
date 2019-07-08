@@ -36,8 +36,9 @@ public class MealDetail extends AppCompatActivity {
     TabLayout tabLayout;
     String mealDescription;
     int mealId;
+    int mealCategoryId;
     Order order=new Order();
-    Fragment fragment1 = new FragmentMealDetail(0);
+    Fragment fragment1 = new FragmentMealDetail(0,0);
     private static int cart_count = 0;
 
     @Override
@@ -63,7 +64,8 @@ public class MealDetail extends AppCompatActivity {
                     .into(mMealImage);
             mealId = mBundle.getInt("id");
             mealDescription = mBundle.getString("description");
-            fragment1 = new FragmentMealDetail(mealId);
+            mealCategoryId=mBundle.getInt("categoryId");
+            fragment1 = new FragmentMealDetail(mealId,mealCategoryId);
         }
         initComponent();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame2, fragment1).commit();
@@ -81,7 +83,7 @@ public class MealDetail extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
                     case 0:
-                        fragment1 = new FragmentMealDetail(mealId);
+                        fragment1 = new FragmentMealDetail(mealId,mealCategoryId);
                         break;
                     case 1:
                         fragment1 = new FragmentMealDesc(mealDescription);

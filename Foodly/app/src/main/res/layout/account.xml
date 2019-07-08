@@ -58,9 +58,10 @@
         android:layout_marginTop="15dp"/>
 
     <TextView
+        android:id="@+id/userScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="500 s.p"
+        android:text="50"
         android:textSize="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"

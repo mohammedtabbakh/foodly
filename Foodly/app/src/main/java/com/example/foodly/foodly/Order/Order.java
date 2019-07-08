@@ -32,8 +32,8 @@ public class Order extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-       View view=inflater.inflate(R.layout.order, container, false);
-       buyingButton=view.findViewById(R.id.buyBtn);
+        View view = inflater.inflate(R.layout.order, container, false);
+        buyingButton = view.findViewById(R.id.buyBtn);
 
       /* buyingButton.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -62,7 +62,7 @@ public class Order extends Fragment {
                alertDialog.show();
            }
        });*/
-       return view;
+        return view;
 
     }
 
@@ -70,29 +70,31 @@ public class Order extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-for (int i=0;i<OrderCompnents.Ingredeints.size();i++)
-{
-    items.add(new CartItem(OrderCompnents.Ingredeints.get(i).getIngredientName()));
-}
-
-        //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("الطلبات");
         items = new ArrayList<CartItem>();
-        items.add(new CartItem() {{
-            setItemName("فول");
-        }});
-        items.add(new CartItem() {{
-            setItemName("حمص");
-        }});
-        items.add(new CartItem() {{
-            setItemName("تفاح");
-        }});
-        items.add(new CartItem() {{
-            setItemName("برتقال");
-        }});
-        for (int i=0;i<OrderCompnents.Ingredeints.size();i++)
-        {
-            items.add(new CartItem(OrderCompnents.Ingredeints.get(i).getIngredientName()));
+        if (OrderCompnents.Ingredeints.size() != 0) {
+            for (int i = 0; i < OrderCompnents.Ingredeints.size(); i++) {
+                items.add(new CartItem(OrderCompnents.Ingredeints.get(i).getIngredientName()));
+            }
+        }
+        //you can set the title for your toolbar here for different fragments different titles
+        else {
+            items = new ArrayList<CartItem>();
+            items.add(new CartItem() {{
+                setItemName("فول");
+            }});
+            items.add(new CartItem() {{
+                setItemName("حمص");
+            }});
+            items.add(new CartItem() {{
+                setItemName("تفاح");
+            }});
+            items.add(new CartItem() {{
+                setItemName("برتقال");
+            }});
+            for (int i = 0; i < OrderCompnents.Ingredeints.size(); i++) {
+                items.add(new CartItem(OrderCompnents.Ingredeints.get(i).getIngredientName()));
+            }
         }
         itemsListView = getView().findViewById(R.id.items_list_view);
         itemsAdapter = new CartItemsAdapter(getContext(), items);
@@ -101,39 +103,38 @@ for (int i=0;i<OrderCompnents.Ingredeints.size();i++)
             @Override
             public void onClick(View v) {
                 onBuyingButtonClicked();
-                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
-                        alertDialogBuilder.setTitle("تأكيد الشراء");
+                alertDialogBuilder.setTitle("تأكيد الشراء");
 
-                        alertDialogBuilder
-                                .setMessage("هل تريد تأكيد عملية الشراء")
-                                .setCancelable(false)
-                                .setPositiveButton("نعم",new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,int id) {
-                                        dialog.dismiss();
-                                        Toast toast = Toast.makeText(getActivity(), "صحتين و هنا سلفاً D:", Toast.LENGTH_SHORT);
+                alertDialogBuilder
+                        .setMessage("هل تريد تأكيد عملية الشراء")
+                        .setCancelable(false)
+                        .setPositiveButton("نعم", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                                Toast toast = Toast.makeText(getActivity(), "صحتين و هنا سلفاً D:", Toast.LENGTH_SHORT);
 
-                                        toast.show();
-                                    }
-                                })
-                                .setNegativeButton("لا",new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
-                        AlertDialog alertDialog = alertDialogBuilder.create();
-                        alertDialog.show();
+                                toast.show();
+                            }
+                        })
+                        .setNegativeButton("لا", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
 
             }
         });
     }
 
     private void onBuyingButtonClicked() {
-        ArrayList<CartItem> cartlist =new ArrayList<CartItem>() ;
-        for (int i =0;i<itemsAdapter.getCount();i++)
-        {
-            CartItem item =itemsAdapter.getItem(i);
-            if (item.isChecked()){
+        ArrayList<CartItem> cartlist = new ArrayList<CartItem>();
+        for (int i = 0; i < itemsAdapter.getCount(); i++) {
+            CartItem item = itemsAdapter.getItem(i);
+            if (item.isChecked()) {
                 cartlist.add(item);
             }
         }

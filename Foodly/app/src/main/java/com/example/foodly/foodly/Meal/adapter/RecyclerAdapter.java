@@ -58,6 +58,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MealViewHolder> {
                 mIntent.putExtra("Image", MealsList.get(holder.getAdapterPosition()).getPhoto());
                 mIntent.putExtra("id",MealsList.get(position).getId());
                 mIntent.putExtra("description",MealsList.get(position).getDescription());
+                mIntent.putExtra("categoryId",MealsList.get(position).getCategoryId());
                 mContext.startActivity(mIntent);
             }
         });

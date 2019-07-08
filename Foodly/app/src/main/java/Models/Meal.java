@@ -13,6 +13,7 @@ public class Meal {
     private String name;
     private String description;
     private Category category;
+    private int categoryId;
     private double calories;
     private String fullPhotoPath;
     private int preparingTime;
@@ -57,5 +58,13 @@ public class Meal {
 
     public void setMealIngredients(List<MealIngredient> mealIngredients) {
         this.mealIngredients = mealIngredients;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 }

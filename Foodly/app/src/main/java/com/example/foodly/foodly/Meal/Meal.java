@@ -32,7 +32,7 @@ public class Meal extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
-                intent.putExtra("categoryName","شرقي");
+                intent.putExtra("categoryName","وجبات شرقية");
                 intent.putExtra("categoryId",1);
                 startActivity(intent);
 
@@ -43,7 +43,7 @@ public class Meal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
-                intent.putExtra("categoryName","غربي");
+                intent.putExtra("categoryName","وجبات غريبة");
                 intent.putExtra("categoryId",2);
                 startActivity(intent);
             }
@@ -53,7 +53,7 @@ public class Meal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent= new Intent(getActivity().getApplicationContext(),MealName.class);
-                intent.putExtra("categoryName","صحي");
+                intent.putExtra("categoryName","وجبات صحية");
                 intent.putExtra("categoryId",3);
                 startActivity(intent);
             }
